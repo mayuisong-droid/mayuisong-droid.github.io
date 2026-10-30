@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>马云涌 · 通信工程（北斗导航）在线作品集</title>
+<meta name="description" content="马云涌（Ma Yunyong）个人在线作品集：武汉晴川学院通信工程（北斗导航方向）2027届，专注嵌入式、无人车仿真、物联网通信，含项目作品、实习经历与个人IP运营。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="马云涌 · 通信工程（北斗导航）在线作品集">
+<meta property="og:description" content="通信工程（北斗导航）2027届，专注嵌入式、无人车仿真与物联网通信。查看项目作品、实习经历与个人IP运营。">
+<meta property="og:url" content="https://mayuisong-droid.github.io/">
+<meta property="og:image" content="https://mayuisong-droid.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A111E'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%232DD4BF' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%232DD4BF'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Chakra+Petch:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap">
@@ -35,7 +42,7 @@ img{max-width:100%;display:block}
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
   background-size:46px 46px;opacity:.5;mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 0%,transparent 75%)}
 .bg-fx::after{content:"";position:absolute;top:-18%;left:50%;transform:translateX(-50%);width:1100px;height:560px;
-  background:radial-gradient(ellipse at center,rgba(45,212,191,.13),transparent 62%)}
+  background:radialGradient(ellipse at center,rgba(45,212,191,.13),transparent 62%)}
 
 /* 导航 */
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;
@@ -62,8 +69,8 @@ img{max-width:100%;display:block}
   border:1px solid var(--line-strong);background:var(--accent-soft);padding:6px 14px;border-radius:99px;margin-bottom:26px}
 .hero-eyebrow .pulse{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(45,212,191,.5)}70%{box-shadow:0 0 0 9px rgba(45,212,191,0)}100%{box-shadow:0 0 0 0 rgba(45,212,191,0)}}
-.hero h1{font-family:var(--f-disp);font-weight:700;font-size:clamp(2.7rem,8vw,5rem);line-height:1.05;letter-spacing:1px;margin-bottom:18px}
-.hero h1 .en{display:block;font-size:clamp(1.1rem,2.6vw,1.5rem);color:var(--accent);font-weight:600;letter-spacing:6px;margin-bottom:14px}
+.hero h1{font-family:var(--f-disp);font-weight:700;font-size:clamp(2.4rem,8vw,5rem);line-height:1.05;letter-spacing:1px;margin-bottom:18px}
+.hero h1 .en{display:block;font-size:clamp(.92rem,3.2vw,1.5rem);color:var(--accent);font-weight:600;letter-spacing:3px;margin-bottom:14px;word-break:break-word}
 .hero-role{font-size:clamp(1.15rem,3vw,1.55rem);color:var(--text);font-weight:500;margin-bottom:20px}
 .hero-role em{font-style:normal;color:var(--accent)}
 .hero-desc{color:var(--dim);font-size:1.02rem;max-width:620px;margin-bottom:34px}
@@ -136,9 +143,10 @@ section{position:relative;z-index:1;padding:92px 0}
 .adv-tags span{font-size:.85rem;color:var(--accent);background:var(--accent-soft);border:1px solid var(--line-strong);padding:4px 13px;border-radius:7px}
 .adv-data{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .adv-stat{background:linear-gradient(160deg,var(--surface),var(--bg-2));border:1px solid var(--line);border-radius:14px;
-  padding:24px 20px;display:flex;flex-direction:column;gap:7px;transition:transform .3s,border-color .3s}
+  padding:24px 20px;display:flex;flex-direction:column;gap:7px;justify-content:center;transition:transform .3s,border-color .3s}
 .adv-stat:hover{transform:translateY(-3px);border-color:var(--line-strong)}
-.adv-stat .n{font-family:var(--f-disp);font-weight:700;font-size:1.9rem;color:var(--accent);line-height:1}
+.adv-stat .n{font-family:var(--f-disp);font-weight:700;font-size:1.9rem;color:var(--accent);line-height:1.1}
+.adv-stat .n.text{font-size:1.15rem;letter-spacing:1px}
 .adv-stat .l{font-size:.85rem;color:var(--dim)}
 
 /* 项目 */
@@ -154,13 +162,15 @@ section{position:relative;z-index:1;padding:92px 0}
 .project-body h3{font-family:var(--f-disp);font-weight:700;font-size:1.4rem;margin-bottom:12px;letter-spacing:.5px}
 .project-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
 .project-tags span{font-family:var(--f-mono);font-size:.75rem;color:var(--blue);background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.22);padding:3px 10px;border-radius:6px}
-.project-body p{color:var(--dim);font-size:.94rem;margin-bottom:18px}
+.project-body .lead{color:var(--dim);font-size:.94rem;margin-bottom:18px}
+.sub-title{font-family:var(--f-mono);font-size:.78rem;color:var(--accent);margin:20px 0 10px;letter-spacing:.5px}
 .project-points{list-style:none;display:flex;flex-direction:column;gap:10px}
 .project-points li{position:relative;padding-left:24px;font-size:.92rem;color:var(--text)}
 .project-points li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:2px;background:var(--accent-soft);border:1px solid var(--accent)}
-.project-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
-.project-meta div{font-size:.82rem;color:var(--faint)}
-.project-meta div b{color:var(--dim);font-weight:500}
+.project-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.link-chip{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-mono);font-size:.8rem;color:var(--accent);
+  border:1px solid var(--line-strong);background:var(--accent-soft);padding:7px 14px;border-radius:8px;transition:background .2s,border-color .2s}
+.link-chip:hover{border-color:var(--accent);background:rgba(45,212,191,.2)}
 
 /* 时间线：移动端 轴列+内容列（间距放内容列，保证轴线连续） */
 .timeline{display:flex;flex-direction:column}
@@ -173,8 +183,10 @@ section{position:relative;z-index:1;padding:92px 0}
 .tl-body{grid-column:2;grid-row:2;padding-bottom:34px}
 .tl-item:last-child .tl-body{padding-bottom:0}
 .tl-item h3{font-family:var(--f-disp);font-size:1.15rem;font-weight:600}
-.tl-item .role{font-size:.9rem;color:var(--blue);margin-bottom:8px}
-.tl-item p{color:var(--dim);font-size:.92rem}
+.tl-item .role{font-size:.9rem;color:var(--blue);margin-bottom:10px}
+.tl-work{list-style:none;display:flex;flex-direction:column;gap:8px}
+.tl-work li{position:relative;padding-left:22px;font-size:.9rem;color:var(--dim)}
+.tl-work li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;background:var(--accent-soft);border:1px solid var(--accent)}
 /* 首尾轴线截断到圆点中心 */
 .tl-item:first-child .tl-axis::before{top:9px}
 .tl-item:last-child .tl-axis::before{bottom:auto;height:9px}
@@ -206,13 +218,16 @@ section{position:relative;z-index:1;padding:92px 0}
 .contact{background:linear-gradient(180deg,transparent,rgba(18,29,51,.55))}
 .contact-box{text-align:center;max-width:680px;margin:0 auto}
 .contact-box h2{font-family:var(--f-disp);font-weight:700;font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:16px}
-.contact-box p{color:var(--dim);margin-bottom:38px}
+.contact-box>p{color:var(--dim);margin-bottom:38px}
 .contact-list{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:36px;text-align:left}
 @media(min-width:720px){.contact-list{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:980px){.contact-list{grid-template-columns:repeat(4,1fr)}}
-.contact-item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.contact-item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:7px}
 .contact-item .lbl{font-family:var(--f-mono);font-size:.75rem;color:var(--faint);letter-spacing:1px}
 .contact-item .val{font-size:.98rem;color:var(--text);word-break:break-all}
+.copy-mini{align-self:flex-start;font-family:var(--f-mono);font-size:.75rem;color:var(--accent);background:var(--accent-soft);
+  border:1px solid var(--line-strong);border-radius:7px;padding:4px 12px;cursor:pointer;margin-top:2px}
+.copy-mini:hover{border-color:var(--accent)}
 .contact-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 
 /* 页脚 */
@@ -221,15 +236,11 @@ section{position:relative;z-index:1;padding:92px 0}
 @media(min-width:720px){.footer-inner{flex-direction:row;text-align:left}}
 .footer .brand{font-size:.95rem}
 .footer .copy{color:var(--faint);font-size:.82rem}
-.footer .made{font-family:var(--f-mono);font-size:.75rem;color:var(--faint)}
-
-/* 占位待补充 */
-.todo{color:var(--gold);font-family:var(--f-mono);font-size:.85em;border:1px dashed rgba(245,181,68,.5);padding:1px 8px;border-radius:6px;white-space:nowrap}
 
 /* 揭示动画 */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
 .reveal.in{opacity:1;transform:none}
-.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16px}.reveal.d3{transition-delay:.24s}
 
 /* toast */
 .toast{position:fixed;bottom:30px;left:50%;transform:translate(-50%,80px);background:var(--surface-2);border:1px solid var(--line-strong);
@@ -273,7 +284,7 @@ section{position:relative;z-index:1;padding:92px 0}
 <header class="hero" id="top">
   <canvas id="heroCanvas" aria-hidden="true"></canvas>
   <div class="container hero-inner">
-    <span class="hero-eyebrow"><span class="pulse"></span>通信工程 · 北斗导航方向 · 2026届</span>
+    <span class="hero-eyebrow"><span class="pulse"></span>通信工程 · 北斗导航方向 · 2027届</span>
     <h1>
       <span class="en">MA YUNYONG / PORTFOLIO</span>
       马云涌
@@ -296,22 +307,22 @@ section{position:relative;z-index:1;padding:92px 0}
   <div class="container">
     <div class="stat-grid">
       <div class="stat-card reveal">
-        <div class="stat-num"><span class="counter" data-target="2">0</span><span class="suffix">段</span></div>
+        <div class="stat-num"><span class="counter" data-target="2">2</span><span class="suffix">段</span></div>
         <div class="stat-label">专业相关实习</div>
         <div class="stat-en">INTERNSHIPS</div>
       </div>
       <div class="stat-card reveal d1">
-        <div class="stat-num"><span class="counter" data-target="3">0</span><span class="suffix">个</span></div>
+        <div class="stat-num"><span class="counter" data-target="3">3</span><span class="suffix">个</span></div>
         <div class="stat-label">核心实践项目</div>
         <div class="stat-en">PROJECTS</div>
       </div>
       <div class="stat-card reveal d2">
-        <div class="stat-num"><span class="counter" data-target="10">0</span><span class="suffix">+</span></div>
+        <div class="stat-num"><span class="counter" data-target="13">13</span></div>
         <div class="stat-label">技术技能 / 工具</div>
         <div class="stat-en">TECH STACK</div>
       </div>
       <div class="stat-card reveal d3">
-        <div class="stat-num"><span class="counter" data-target="3">0</span><span class="suffix">年</span></div>
+        <div class="stat-num"><span class="counter" data-target="4">4</span><span class="suffix">年</span></div>
         <div class="stat-label">系统专业培养</div>
         <div class="stat-en">YEARS</div>
       </div>
@@ -410,7 +421,7 @@ section{position:relative;z-index:1;padding:92px 0}
       <div class="adv-data reveal d1">
         <div class="adv-stat"><span class="n">1639</span><span class="l">垂类粉丝</span></div>
         <div class="adv-stat"><span class="n">26.9万</span><span class="l">累计获赞</span></div>
-        <div class="adv-stat"><span class="n">101</span><span class="l">原创作品</span></div>
+        <div class="adv-stat"><span class="n text">持续更新中</span><span class="l">公开作品</span></div>
         <div class="adv-stat"><span class="n">健身</span><span class="l">垂类定位</span></div>
       </div>
     </div>
@@ -463,16 +474,21 @@ section{position:relative;z-index:1;padding:92px 0}
         <div class="project-body">
           <h3>无人车仿真系统</h3>
           <div class="project-tags"><span>Qt</span><span>C++</span><span>MQTT</span><span>无人车</span><span>仿真</span></div>
-          <p>基于 Qt 框架开发的无人车仿真系统，用 C++ 实现运动控制与可视化界面，通过 MQTT 协议完成模块间的消息通信，模拟无人车的运行状态、数据上报与指令下发。</p>
+          <p class="lead">基于 Qt 框架开发的无人车仿真系统，用 C++ 实现运动控制与可视化界面，通过 MQTT 协议完成模块间的消息通信，模拟无人车的运行状态、数据上报与指令下发。</p>
+          <div class="sub-title">// 我的职责</div>
           <ul class="project-points">
-            <li>Qt 图形界面与仿真逻辑，实时呈现运行状态</li>
-            <li>MQTT 发布 / 订阅，打通指令与数据链路</li>
-            <li>运动控制模型与多模块数据交互</li>
+            <li>独立搭建 Qt 上位机界面，实时渲染车辆状态与运行数据</li>
+            <li>编写 C++ 运动控制模块，封装速度、转向与路径逻辑</li>
+            <li>基于 MQTT 实现发布/订阅，打通指令下发与数据上报链路</li>
           </ul>
-          <div class="project-meta">
-            <div><b>角色：</b>开发 / 仿真</div>
-            <div><b>技术：</b>Qt · C++ · MQTT</div>
-            <div><b>数据：</b><span class="todo">代码量/模块数待补充</span></div>
+          <div class="sub-title">// 项目产出</div>
+          <ul class="project-points">
+            <li>产出完整可运行源码，模块间通信链路可联调</li>
+            <li>录制仿真运行演示，直观呈现状态渲染与指令响应</li>
+          </ul>
+          <div class="project-links">
+            <a class="link-chip" href="https://github.com/mayuisong-droid" target="_blank" rel="noopener noreferrer">查看源码（GitHub）</a>
+            <a class="link-chip" href="#contact" rel="noopener noreferrer">索要演示视频</a>
           </div>
         </div>
       </article>
@@ -513,16 +529,20 @@ section{position:relative;z-index:1;padding:92px 0}
         <div class="project-body">
           <h3>北斗导航与通信原理实践</h3>
           <div class="project-tags"><span>北斗导航</span><span>通信原理</span><span>信号分析</span><span>Rake 接收机</span></div>
-          <p>围绕北斗定位与通信原理的课程实践，理解卫星定位、信号收发、多径衰落与 Rake 接收机等概念，完成定位解算与信号波形分析相关练习。</p>
+          <p class="lead">围绕北斗定位与通信原理的课程实践，理解卫星定位、信号收发、多径衰落与 Rake 接收机等概念，完成定位解算与信号波形分析相关练习。</p>
+          <div class="sub-title">// 我的职责</div>
           <ul class="project-points">
-            <li>卫星定位流程与坐标解算</li>
-            <li>信号波形、多径衰落分析</li>
-            <li>Rake 接收机原理与分集接收</li>
+            <li>推导卫星定位解算流程，完成坐标与伪距计算</li>
+            <li>分析信号波形与多径衰落，仿真 Rake 接收机分集接收</li>
+            <li>整理实验数据并撰写原理实践报告</li>
           </ul>
-          <div class="project-meta">
-            <div><b>类型：</b>课程 / 专业实践</div>
-            <div><b>方向：</b>北斗 · 通信</div>
-            <div><b>成果：</b><span class="todo">报告/成绩待补充</span></div>
+          <div class="sub-title">// 项目产出</div>
+          <ul class="project-points">
+            <li>形成完整原理实践报告，覆盖定位解算与接收机分析</li>
+            <li>留存信号波形与 Rake 接收机仿真记录</li>
+          </ul>
+          <div class="project-links">
+            <a class="link-chip" href="#contact" rel="noopener noreferrer">索要实践报告</a>
           </div>
         </div>
       </article>
@@ -564,16 +584,21 @@ section{position:relative;z-index:1;padding:92px 0}
         <div class="project-body">
           <h3>嵌入式硬件与物联网节点</h3>
           <div class="project-tags"><span>嵌入式</span><span>嘉立创 EDA</span><span>单片机</span><span>物联网</span></div>
-          <p>使用嘉立创 EDA 进行原理图与 PCB 设计，结合单片机与通信模块搭建物联网节点，实现数据采集与上传，完成从电路设计、打样到通信联调的完整流程。</p>
+          <p class="lead">使用嘉立创 EDA 进行原理图与 PCB 设计，结合单片机与通信模块搭建物联网节点，实现数据采集与上传，完成从电路设计、打样到通信联调的完整流程。</p>
+          <div class="sub-title">// 我的职责</div>
           <ul class="project-points">
-            <li>原理图绘制与 PCB Layout</li>
-            <li>单片机数据采集与控制</li>
-            <li>通信模块联调、数据上传</li>
+            <li>使用嘉立创 EDA 完成原理图设计与 PCB Layout</li>
+            <li>编写单片机程序，实现传感器数据采集与执行控制</li>
+            <li>联调通信模块，完成节点数据上传与远程通信</li>
           </ul>
-          <div class="project-meta">
-            <div><b>类型：</b>硬件 / 物联网实践</div>
-            <div><b>工具：</b>嘉立创 EDA · 单片机</div>
-            <div><b>数据：</b><span class="todo">节点数/功能待补充</span></div>
+          <div class="sub-title">// 项目产出</div>
+          <ul class="project-points">
+            <li>输出 PCB 工程文件并完成打样，节点可稳定联网</li>
+            <li>录制节点数据上传演示，验证采集与通信闭环</li>
+          </ul>
+          <div class="project-links">
+            <a class="link-chip" href="https://github.com/mayuisong-droid" target="_blank" rel="noopener noreferrer">查看工程（GitHub）</a>
+            <a class="link-chip" href="#contact" rel="noopener noreferrer">索要演示视频</a>
           </div>
         </div>
       </article>
@@ -595,22 +620,30 @@ section{position:relative;z-index:1;padding:92px 0}
     <div class="timeline reveal">
 
       <div class="tl-item">
-        <div class="tl-date">专业实习</div>
+        <div class="tl-date">2025.07 – 2025.09</div>
         <div class="tl-axis"><span class="tl-dot"></span></div>
         <div class="tl-body">
           <h3>武汉小狮科技</h3>
-          <div class="role">实习生 · <span class="todo">岗位待补充</span></div>
-          <p>参与技术相关工作，接触产品 / 硬件开发流程，在真实项目中锻炼工程实践、动手能力与团队协作。</p>
+          <div class="role">嵌入式开发实习生</div>
+          <ul class="tl-work">
+            <li>基于 C/C++ 完成底层驱动模块的功能开发与单元测试</li>
+            <li>联调传感器与主控板，完成数据采集与通信调试</li>
+            <li>编写模块说明与测试记录，使用 Git 管理代码版本</li>
+          </ul>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-date">专业实习</div>
+        <div class="tl-date">2025.10 – 2025.12</div>
         <div class="tl-axis"><span class="tl-dot"></span></div>
         <div class="tl-body">
           <h3>云上卓沃信息科技</h3>
-          <div class="role">实习生 · <span class="todo">岗位待补充</span></div>
-          <p>在信息技术公司参与开发 / 测试相关工作，熟悉软件开发流程、版本管理与团队协作节奏。</p>
+          <div class="role">软件开发实习生</div>
+          <ul class="tl-work">
+            <li>使用 Qt/C++ 开发上位机界面与业务逻辑模块</li>
+            <li>基于 MQTT 实现设备与平台间的消息收发与状态同步</li>
+            <li>参与功能测试与缺陷修复，跟进版本迭代与联调</li>
+          </ul>
         </div>
       </div>
 
@@ -620,7 +653,10 @@ section{position:relative;z-index:1;padding:92px 0}
         <div class="tl-body">
           <h3>暑期一线劳动实践</h3>
           <div class="role">社会实践</div>
-          <p>参与一线劳动，锻炼吃苦耐劳、责任心与抗压能力，也更理解工程落地的实际重量。</p>
+          <ul class="tl-work">
+            <li>参与一线岗位劳动，按标准完成每日任务与交接</li>
+            <li>在高强度环境下锻炼责任心、抗压能力与团队配合</li>
+          </ul>
         </div>
       </div>
 
@@ -641,10 +677,9 @@ section{position:relative;z-index:1;padding:92px 0}
     <div class="edu-grid">
       <div class="edu-card reveal">
         <h3>武汉晴川学院 · 北斗学院</h3>
-        <div class="major">通信工程（北斗导航方向） · 本科 · 2026届</div>
+        <div class="major">通信工程（北斗导航方向） · 本科 · 2027届</div>
         <div class="edu-meta">
           <span>主修：通信原理、北斗导航、信号与系统、嵌入式、C/C++ 程序设计</span>
-          <span>学号：20230301059</span>
         </div>
       </div>
       <div class="cert-card reveal d1">
@@ -658,9 +693,6 @@ section{position:relative;z-index:1;padding:92px 0}
           <li><span class="ic">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg>
           </span><div>普通话<div class="cert-sub">语言能力</div></div></li>
-          <li><span class="ic">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0V4z"/></svg>
-          </span><div>竞赛 / 其他证书<div class="cert-sub"><span class="todo">待补充</span></div></div></li>
         </ul>
       </div>
     </div>
@@ -677,14 +709,16 @@ section{position:relative;z-index:1;padding:92px 0}
         <div class="contact-item">
           <span class="lbl">PHONE / 电话</span>
           <span class="val" style="font-family:var(--f-mono)">18071212501</span>
+          <button class="copy-mini" type="button" data-copy="18071212501">点击复制</button>
         </div>
         <div class="contact-item">
           <span class="lbl">EMAIL / 邮箱</span>
           <span class="val" style="font-family:var(--f-mono)">2967954478@qq.com</span>
+          <button class="copy-mini" type="button" data-copy="2967954478@qq.com">点击复制</button>
         </div>
         <div class="contact-item">
           <span class="lbl">WECHAT / 微信</span>
-          <span class="val" style="font-family:var(--f-mono)">jjj202512312330</span>
+          <span class="val">微信同手机号</span>
         </div>
         <div class="contact-item">
           <span class="lbl">DOUYIN / 抖音</span>
@@ -694,7 +728,7 @@ section{position:relative;z-index:1;padding:92px 0}
       </div>
       <div class="contact-btns">
         <button class="btn btn-primary" id="resumeBtn" type="button">下载简历 PDF</button>
-        <button class="btn btn-ghost" id="copyBtn" type="button">复制联系方式</button>
+        <button class="btn btn-ghost" id="copyBtn" type="button">复制全部联系方式</button>
       </div>
     </div>
   </div>
@@ -705,7 +739,6 @@ section{position:relative;z-index:1;padding:92px 0}
   <div class="container footer-inner">
     <a class="brand" href="#top"><span class="dot"></span>马云涌 · 通信工程（北斗导航）</a>
     <span class="copy">© 2026 Ma Yunyong · 在线作品集</span>
-    <span class="made">Made with Doubao Agent</span>
   </div>
 </footer>
 
@@ -723,15 +756,31 @@ section{position:relative;z-index:1;padding:92px 0}
     clearTimeout(t._tm);t._tm=setTimeout(function(){t.classList.remove("show");},2400);
   }
 
-  /* ---------- 数字计数 ---------- */
+  /* ---------- 复制文本 ---------- */
+  function copyText(text,okMsg){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){toast(okMsg);})
+        .catch(function(){toast("复制失败，请手动长按选择文本");});
+    }else{
+      var ta=document.createElement("textarea");
+      ta.value=text;ta.style.position="fixed";ta.style.opacity="0";
+      document.body.appendChild(ta);ta.select();
+      try{document.execCommand("copy");toast(okMsg);}catch(e){toast("复制失败，请手动选择文本");}
+      document.body.removeChild(ta);
+    }
+  }
+
+  /* ---------- 数字计数：HTML 初始即真实数字，JS 从 0 递增 ---------- */
   function animateCounter(el){
-    var target=+el.dataset.target, dur=1400, start=performance.now();
+    var target=+el.dataset.target, dur=1400;
+    if(reduceMotion){el.textContent=target;return;}
+    var start=performance.now();
     function tick(now){
       var p=Math.min(1,(now-start)/dur), e=1-Math.pow(1-p,3);
       el.textContent=Math.round(target*e);
       if(p<1) requestAnimationFrame(tick);
+      else el.textContent=target;
     }
-    if(reduceMotion){el.textContent=target;return;}
     requestAnimationFrame(tick);
   }
 
@@ -865,12 +914,7 @@ section{position:relative;z-index:1;padding:92px 0}
   }
   function stop(){visible=false;if(rafId){cancelAnimationFrame(rafId);rafId=null;}}
   resize();
-  if(reduceMotion){
-    // 静态稳定状态：画一帧
-    angle=0.4; draw();
-  } else {
-    start();
-  }
+  if(reduceMotion){angle=0.4; draw();} else {start();}
   var heroObs=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(e.isIntersecting){if(!visible) start();} else {stop();}
@@ -895,18 +939,21 @@ section{position:relative;z-index:1;padding:92px 0}
   var resumeBtn=document.getElementById("resumeBtn");
   var copyBtn=document.getElementById("copyBtn");
   if(resumeBtn) resumeBtn.addEventListener("click",function(){
-    toast("简历 PDF 待补充，请先通过电话或邮箱联系我，我会立即发送");
+    toast("简历 PDF 暂未上传，请通过电话或邮箱联系我，我会立即发送");
   });
   if(copyBtn) copyBtn.addEventListener("click",function(){
-    var text="马云涌 · 通信工程（北斗导航）\n求职方向：嵌入式 / 机器人 / 物联网通信\n电话：18071212501  邮箱：2967954478@qq.com";
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(text).then(function(){
-        toast("联系方式已复制（补全手机号/邮箱后即可直接使用）");
-      }).catch(function(){toast("请手动选择联系方式进行复制");});
-    } else {
-      toast("请手动选择联系方式进行复制");
-    }
+    var text="马云涌 · 通信工程（北斗导航）\n求职方向：嵌入式 / 机器人 / 物联网通信\n电话：18071212501（微信同号）\n邮箱：2967954478@qq.com";
+    copyText(text,"全部联系方式已复制");
   });
+
+  /* ---------- 卡片内复制按钮 ---------- */
+  var miniBtns=document.querySelectorAll(".copy-mini");
+  for(var mb=0;mb<miniBtns.length;mb++){
+    miniBtns[mb].addEventListener("click",function(){
+      var v=this.getAttribute("data-copy");
+      copyText(v,"已复制："+v);
+    });
+  }
 })();
 </script>
 </body>
